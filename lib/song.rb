@@ -29,7 +29,8 @@ class Song
 
   def self.genre_count
     @genre_count = Hash.new
-    @@genres.each {|genre| @genre_count[genre => @@genres.count(genre)]}.uniq
+    @@genres.each do |genre|
+      @genre_count[genre => @@genres.count(genre)]}.uniq
     binding.pry
   end
 
